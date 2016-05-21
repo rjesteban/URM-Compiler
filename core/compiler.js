@@ -18,9 +18,9 @@ keyword_table = {
 };
 
 keyword_table['func']
-var input = 'jump(2, 3, 5);\nsuccessor(1);\nsuccessor(3);\njump(1, 1, 1);\nzero(2);\nzero(3);\nprint("YO L   ,,  , O");//thisisa comment;';
+//var input = 'jump(2, 3, 5);\nsuccessor(1);\nsuccessor(3);\njump(1, 1, 1);\nzero(2);\nzero(3);\nprint("YO L   ,,  , O");//thisisa comment;';
 
-function tokenize(){
+function tokenize(input){
     var code = input.split(/\n+/g);
     var tokens = [];
 
@@ -141,6 +141,3 @@ function generate_code(tree) {
 }
 
 
-var tokens = tokenize();
-var tree = parse_tree(tokens);
-var output = generate_code(tree);

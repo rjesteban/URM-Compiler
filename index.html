@@ -28,23 +28,22 @@
     
     <div id="editor"></div>
 <aside>    
-    <div >
+    <div align="right">
         <pre>
             <script src="core/compiler.js"></script>
             <script src="core/interpreter.js"></script>
         </pre>
     </div>
 </aside>
-
-    
+<div align="right">
+    <input type="file" id="file-input"/>
+    <br>
+    <button id="alertcontent-btn">Compile and Interpret</button>
+</div>  
+    <script src="assets/vendor/jquery/jquery.js"></script>
     <script src="ace/build/src/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-        editor.setTheme("ace/theme/monokai");
-        editor.getSession().setMode("ace/mode/urm");
-    </script>
-   
-  
+    <script src="assets/javascripts/editor.js"></script>
+    <script src="assets/javascripts/ide.js"></script>
 </body>
 
 </html>

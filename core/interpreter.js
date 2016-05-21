@@ -78,4 +78,4 @@ function interpret(input) {
     document.write(urm.slice(1));
 }
 
-interpret(output);
+//interpret(outpu);
