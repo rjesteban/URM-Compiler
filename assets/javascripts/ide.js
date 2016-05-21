@@ -78,12 +78,12 @@ $('#assign').on('click', function(){
         console.log(registers);
         window.urm = [""];
         for(i = 0; i < registers.length; i++){
-            var reg = parseInt(registers[i]); 
-            if(isNaN(reg)){
+            var reg = registers[i].match(/\D+/);
+            if(reg != null){
                 window.urm = null;
                 break;
             } else {
-                window.urm.push(reg);
+                window.urm.push(parseInt(registers[i]));
             }
         }
     }
