@@ -24,13 +24,11 @@ document.getElementById('file-input')
 
 document.onkeydown = function (event) {
       event = (event || window.event);
-      if (event.keyCode == 118) {
-          //alert('No F-keys');
-          openNav();
+      if (event.keyCode == 119) {
+          openCloseNav();
       }
-      else if (event.keyCode == 119) {
-          //alert('No F-keys');
-          closeNav();
+      else if (event.keyCode == 118) {
+          openCloseInfo();
       }
 }
 
@@ -60,7 +58,35 @@ function openCloseNav(){
 
 }
 
+function openNavInfo() {
+    document.getElementById("mySideInfonav").style.width = "35%";
+    document.getElementById("editor").style.marginLeft = "35%";
+    document.getElementById("head").style.marginLeft = "35%";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNavInfo() {
+    document.getElementById("mySideInfonav").style.width = "0";
+    document.getElementById("editor").style.marginLeft= "0";
+    document.getElementById("head").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+function openCloseInfo(){
+    if(document.getElementById("mySideInfonav").style.width == 0 ||
+    document.getElementById("mySideInfonav").style.width == "0px" ){
+        openNavInfo();
+    }
+    else if(document.getElementById("mySideInfonav").style.width != 0){
+        closeNavInfo();
+    }
+
+} 
+
 $("#side").on('click', function(){ openCloseNav(); });
+
+$("#info").on('click', function(){ openCloseInfo(); });
+
 
 $(function(){
 $("#upload").on('click', function(e){

@@ -2,19 +2,23 @@
 <html>
 
 <head>
+    <script src="assets/vendor/jquery/jquery.js"></script>
+    <script src="assets/javascripts/disabler.js"></script>
     <title>URM - CMSC 141 Final Project</title>
     <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/app.css">
+
 </head>
 
 <body>
     <div id="head" >
-        <div class="iconBar" >
+        <div class="iconBar">
             <a href="#" id="side"><i class="fa fa-bars"></i></a> 
             <a href="#" id="upload" class="menu">Open</a>
             <a href="#" id="assign" class="menu">Assign</a> 
             <a href="#" id="compile" class="menu">Compile</a>
             <a href="#" id="execute" class="menu">Execute</a>
+            <a href="#" id="info" class="menu">Info</a>
 
         </div>
         <div id="editor"></div>
@@ -31,6 +35,47 @@
         </a>
 
         <div id="logs"></div>
+    </div>   
+
+    <div id="mySideInfonav" class="sideInfonav">
+        <div align="center">
+        <h3>Unlimited Register Machine(URM) Compiler</h3>
+        <hr>
+        <h4>Syntax</h4>
+            <span class="key">succesor</span>
+            <span class="param">(A);</span>
+                <span class="text">// increments the value of index A by 1</span><br>
+            <span class="key">decrement</span>
+            <span class="param">(A); </span>
+                <span class="text">// decrement the value of index A by 1</span><br>
+            <span class="key">zero</span>
+            <span class="param">(A); </span>
+                <span class="text">// makes the value of index A be equivalent to 0</span><br>
+            <span class="key">copy</span>
+            <span class="param">(A,B); </span>
+                <span class="text">// makes the value of index B be equivalent to the value of index A
+                    </span><br>
+            <span class="key">jump</span>
+            <span class="param">(A,B,C); </span>
+                <span class="text"> // jumps to line C if the value of index A is not equivalent to the value of B, else proceed to the next line</span> <br>
+            <span class="key">print</span>
+            <span class="param">(A); </span>
+                <span class="text"> // prints to the console the current value of index A</span> <br>
+            <span class="key">print</span>
+            <span class="param">("STRING"); </span>
+                <span class="text"> // prints to the console the STRING parameter </span> <br>
+        <br><hr>
+        <h4>Keyboard Shortcuts</h4>
+            <span class="article">F7</span>
+                <span class="text"> - Key to Open or Close Console and Logger Interface</span> <br>
+            <span class="article">F8</span>
+                <span class="text"> - Key to Open or Close Info Interface</span> <br>
+        <br><hr>
+        <h4>Developers</h4>
+            <span class="name">Arnold Joseph Caesar P. Esteban</span> <br>
+            <span class="name">Mark Vincent B. Melgo</span> <br>
+            <span class="name">Ember Jhon D. Sabsalon</span> <br>
+        </div>
     </div>    
 
 <div class="hidden">
@@ -40,7 +85,6 @@
     <script src="assets/javascripts/helpers.js"></script>
     <script src="core/compiler.js"></script>
     <script src="core/interpreter.js"></script>
-    <script src="assets/vendor/jquery/jquery.js"></script>
     <script src="assets/vendor/ace/build/src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/javascripts/editor.js"></script>
     <script src="assets/javascripts/ide.js"></script>

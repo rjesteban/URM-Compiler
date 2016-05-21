@@ -4,7 +4,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transition: margin-right .5s;
+    transition: margin .5s;
     padding: 16px;
     margin-top: 30px;
 }
@@ -30,7 +30,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transition: margin-right .5s;
+    transition: margin .5s;
 }
 body {
     font-family: "Lato", sans-serif;
@@ -39,6 +39,7 @@ body {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
+    transition: margin .5s;
 }
 .iconBar {
     top: 0;
@@ -49,6 +50,7 @@ body {
     height: 30px;
     text-align: center;
     background-color: #263238;
+    transition: margin .5s;
 }
 
 .iconBar a {
@@ -93,6 +95,36 @@ body {
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
+
+.sideInfonav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    padding-top: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    color: white;
+}
+
+.sideInfonav a {
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+    height : 30px;
+    background-color: black;
+}
+
+.sideInfonav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -130,4 +162,28 @@ p {
     background-color: #1A237E;
     color: white;
     font-size: 12px;
+}
+
+.name {
+    font-size: 13px;
+    color: #f44336;
+}
+
+.text {
+    font-size: 13px;
+    color: #757575;
+}
+
+.article {
+    font-size: 13px;
+    color: #1565C0;
+}
+
+.key {
+    font-size: 13px;
+    color: #F92672;
+}
+
+.param {
+    font-size: 13px;
 }
