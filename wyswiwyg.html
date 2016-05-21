@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>WYSIWYG Editor</title>
+    <style>
+        .editor
+        {
+            width: 500px;
+            height: 500px;
+            background-color: black;
+            color: white;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <!-- Make it content editable attribute true so that we can edit inside the div tag and also enable execCommand to edit content inside it.-->
+    <form class="editor" name="editor" contenteditable="true" spellcheck="false" onkeydown="myKeyPress(event)">
+    </form>
+    <button onclick="yo()">try this</button>    
+</body>
+
+<script>
+    keys = '';
+    function myKeyPress(e){
+        var keynum;
+
+        if(window.event) { // IE                    
+            keynum = e.keyCode;
+        } else if(e.which){ // Netscape/Firefox/Opera                   
+            keynum = e.which;
+        }
+
+        console.log(keynum);
+        if(!(keynum == 8 || keynum == 46 ))
+        {keys += (String.fromCharCode(keynum));}
+        
+    }
+
+    function yo(){
+        alert(keys);
+    }
+</script>
+</html>
