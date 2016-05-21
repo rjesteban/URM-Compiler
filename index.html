@@ -3,45 +3,45 @@
 
 <head>
     <title>URM - CMSC 141 Final Project</title>
-    <style type="text/css" media="screen">
-        #editor { 
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 65%;
-        }
-
-        #console {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            margin-left: 65%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/app.css">
 </head>
 
 <body>
-    
-    <div id="editor"></div>
-<aside>    
-    <div align="right">
-        <pre>
-            <script src="core/compiler.js"></script>
-            <script src="core/interpreter.js"></script>
-        </pre>
+    <div id="head" >
+        <div class="iconBar" >
+            <a href="#" id="side"><i class="fa fa-bars"></i></a> 
+            <a href="#" id="upload" class="menu">Open</a>
+            <a href="#" id="assign" class="menu">Assign</a> 
+            <a href="#" id="compile" class="menu">Compile</a>
+            <a href="#" id="execute" class="menu">Execute</a>
+
+        </div>
+        <div id="editor"></div>
     </div>
-</aside>
-<div align="right">
+
+    <div id="mySidenav" class="sidenav">
+        <a href="#">
+            CONSOLE
+        </a>
+
+        <div id="console"></div>
+        <a href="#">
+            LOGS
+        </a>
+
+        <div id="logs"></div>
+    </div>    
+
+<div class="hidden">
     <input type="file" id="file-input"/>
     <br>
-    <button id="alertcontent-btn">Compile and Interpret</button>
-</div>  
+</div>
+    <script src="assets/javascripts/helpers.js"></script>
+    <script src="core/compiler.js"></script>
+    <script src="core/interpreter.js"></script>
     <script src="assets/vendor/jquery/jquery.js"></script>
-    <script src="ace/build/src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/vendor/ace/build/src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="assets/javascripts/editor.js"></script>
     <script src="assets/javascripts/ide.js"></script>
 </body>
