@@ -3,18 +3,48 @@
 
 <head>
     <title>URM - CMSC 141 Final Project</title>
-    <link rel="stylesheet" type="text/css" href="assets/vendor/syntaxhighlighter/prism.css">
+    <style type="text/css" media="screen">
+        #editor { 
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 65%;
+        }
+
+        #console {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin-left: 65%;
+        }
+    </style>
 </head>
 
 <body>
-    <textarea name="editor" onkeydown="_self()"></textarea>
-    <pre><code class="language-urm line-numbers" contenteditable="true" onkeydown="Prism()">print("yo");
-decrement(3);//This is a comment</code></pre>
-    <script src="assets/vendor/syntaxhighlighter/prism.js"></script>
-    <pre>
-<script src="core/compiler.js"></script>
-<script src="core/interpreter.js"></script>
-</pre>
+    
+    <div id="editor"></div>
+<aside>    
+    <div >
+        <pre>
+            <script src="core/compiler.js"></script>
+            <script src="core/interpreter.js"></script>
+        </pre>
+    </div>
+</aside>
+
+    
+    <script src="ace/build/src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.getSession().setMode("ace/mode/urm");
+    </script>
+   
+  
 </body>
 
 </html>
